@@ -74,7 +74,7 @@ export default async function Home() {
           style={{ fontStyle: "italic" }}
         >
           📆 Add schedule to your calendar:{" "}
-          <a href="/uptrans.ics" className="text-blue-500">
+          <a href="/schedule.ics" className="text-blue-500">
             http://uptrans.klarstrup.dk/schedule.ics
           </a>
         </div>
