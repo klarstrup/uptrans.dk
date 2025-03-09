@@ -11,10 +11,14 @@ export default async function Home() {
         <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
           Trans & Non-Binary Bouldering Meet-Up
         </h2>
-        <p className="text-lg font-semibold text-foreground max-w-[30rem]">
-          Do you want to climb with fellow trans and non-binary climbers? Doesn&apos;t
-          matter if you&apos;re a first-timer or a crusher, this is a space for
-          us to come together, grow as climbers and as a community within climbing.
+        <p className="text-lg font-semibold text-foreground max-w-[35rem]">
+          <div>
+            Do you want to climb with fellow trans and non-binary climbers?
+          </div>{" "}
+          <hr className="border-black/25 border-solid border-2 my-1 mx-auto w-full max-w-[18rem]" />
+          Doesn&apos;t matter if you&apos;re a first-timer or a crusher, this is
+          a space for us to come together, grow as climbers and as a community
+          within climbing.
         </p>
 
         <div className="flex gap-4 flex-col sm:flex-row items-center justify-center">
