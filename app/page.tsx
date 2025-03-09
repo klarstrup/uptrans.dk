@@ -15,9 +15,7 @@ export default async function Home() {
   return (
     <main className="min-h-screen justify-center p-8 outline-solid [outline-width:1em] outline-[#dcccb6] [text-shadow:0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6] flex flex-col-reverse sm:flex-row gap-8 items-center text-center">
       <div className="flex flex-col gap-4 items-center">
-        <h1 className="text-7xl font-bold text-foreground">
-          UpTrans
-        </h1>
+        <h1 className="text-7xl font-bold text-foreground">UpTrans</h1>
         <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
           Trans & Non-Binary Bouldering Meet-Up
         </h2>
@@ -41,27 +39,26 @@ export default async function Home() {
             <li
               className={`
                 border border-solid border-foreground rounded-md p-2
-                bg-white
+                bg-white flex flex-col gap-1
                 `}
               key={event.id}
             >
-              <div className="text-xl font-semibold text-foreground">
+              <div className="text-xl font-semibold">
                 {event.scheduledStartAt &&
                   new Date(event.scheduledStartAt).toLocaleString("da-DK", {
                     dateStyle: "long",
                   })}
               </div>
-              <div className="text-base font-semibold text-foreground">
+              <div className="text-base font-semibold">
                 {event.name}
               </div>
               {event.description ? (
-                <>
-                  <br />
+                <p className="text-base font-normal">
                   {event.description}
-                </>
+                </p>
               ) : null}
               <span
-                className="text-sm font-normal text-foreground"
+                className="text-sm font-normal"
                 style={{ fontStyle: "italic" }}
               >
                 {event.entityMetadata?.location}
