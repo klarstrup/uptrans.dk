@@ -65,7 +65,6 @@ export default async function Home() {
         </ul>
       </div>
       <Image
-        className="dark:invert"
         src={UpTransShonkTransPng}
         alt="Next.js logo"
         width={180}
