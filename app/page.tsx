@@ -117,6 +117,20 @@ export default async function Home() {
             <span className="text-lg font-bold">Contact by email</span>
           </a>
         </div>
+
+        <hr className="border-black/25 border-solid border-2 my-1 mx-auto w-full max-w-[18rem]" />
+        <p className="text-base text-foreground">
+          Suggest changes or improvements to this website on{" "}
+          <a
+            className="[text-shadow:none] text-blue-500 text-lg font-semibold"
+            href="https://github.com/klarstrup/uptrans.dk"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          .
+        </p>
       </div>
       <Image
         src={UpTransShonkTransPng}
