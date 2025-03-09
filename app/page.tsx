@@ -13,7 +13,7 @@ export default async function Home() {
   const scheduledEventsCollection = await guild.scheduledEvents.fetch();
 
   return (
-    <main className="min-h-screen justify-center p-8 pb-20 sm:p-20 outline-solid [outline-width:1em] outline-[#dcccb6] [text-shadow:0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6] flex flex-col-reverse sm:flex-row gap-8 items-center text-center">
+    <main className="min-h-screen justify-center p-8 pb-20 outline-solid [outline-width:1em] outline-[#dcccb6] [text-shadow:0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6] flex flex-col-reverse sm:flex-row gap-8 items-center text-center">
       <div className="flex flex-col gap-4 items-center">
         <h1 className="text-7xl font-bold text-foreground">
           UpTrans
