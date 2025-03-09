@@ -15,7 +15,7 @@ export async function GET() {
   const calendar = new ical.ICalCalendar({
     name: "UpTrans - Trans & Non-Binary Bouldering Meet-Ups",
     timezone: "Europe/Copenhagen",
-    url: "https://uptrans.klarstrup.dk",
+    url: "https://uptrans.dk",
   });
 
   for (const event of scheduledEventsCollection.values()) {

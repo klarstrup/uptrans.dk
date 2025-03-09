@@ -75,7 +75,7 @@ export default async function Home() {
         >
           📆 Add schedule to your calendar:{" "}
           <a href="/schedule.ics" className="text-blue-500">
-            http://uptrans.klarstrup.dk/schedule.ics
+            http://uptrans.dk/schedule.ics
           </a>
         </div>
         <hr className="border-black/25 border-solid border-2 my-1 mx-auto w-full max-w-[18rem]" />
