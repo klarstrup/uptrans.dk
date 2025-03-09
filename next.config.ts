@@ -1,9 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  experimental: {
-    serverComponentsExternalPackages: ["zlib-sync"],
-  },
+  serverComponentsExternalPackages: ["zlib-sync"],
 };
 
 export default nextConfig;
