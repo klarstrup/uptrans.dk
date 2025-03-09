@@ -30,7 +30,6 @@ export default async function Home() {
           a space for us to come together, have fun, get comfortable and to grow
           as climbers and as a community within climbing.
         </p>
-
         <h2 className="text-lg sm:text-xl font-bold text-foreground">
           Upcoming Meet-Ups:
         </h2>
@@ -70,7 +69,16 @@ export default async function Home() {
             </li>
           ))}
         </ul>
-
+        <div
+          className="text-xs font-semibold text-foreground"
+          style={{ fontStyle: "italic" }}
+        >
+          📆 Add schedule to your calendar:{" "}
+          <a href="/uptrans.ics" className="text-blue-500">
+            http://uptrans.klarstrup.dk/schedule.ics
+          </a>
+        </div>
+        <hr className="border-black/25 border-solid border-2 my-1 mx-auto w-full max-w-[18rem]" />
         <p className="text-lg font-semibold text-foreground">
           If you have any questions, feel free to reach out on Discord or email.
         </p>
