@@ -16,9 +16,10 @@ export default function RootLayout({
       <body
         className={`antialiased`}
         style={{
-          backgroundImage: `url(${boardJpg.src})`,
-          backgroundSize: "contain",
-          backgroundPosition: "center",
+          backgroundImage: `url('${boardJpg.src}'), url('${boardJpg.blurDataURL}')`,
+          backgroundSize: "contain, contain",
+          backgroundPosition: "center, center",
+          animation: "blurIn 666ms forwards ease-out",
         }}
       >
         {children}

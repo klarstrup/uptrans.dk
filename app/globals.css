@@ -19,3 +19,12 @@ body {
     helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
     sans-serif;
 }
+
+@keyframes blurIn {
+  0% {
+    backdrop-filter: blur(100px);
+  }
+  100% {
+    backdrop-filter: blur(0px);
+  }
+}
