@@ -1,7 +1,17 @@
 import Image from "next/image";
 import UpTransShonkTransPng from "./UpTransShonkTrans.png";
+import { Client, GatewayIntentBits } from "discord.js";
 
+const client = new Client({
+  intents: [GatewayIntentBits.GuildScheduledEvents],
+});
+client.login(process.env.DISCORD_TOKEN);
 export default async function Home() {
+  const guild =
+    client.guilds.cache.get("1348233191349026846") ||
+    (await client.guilds.fetch("1348233191349026846"));
+  const scheduledEventsCollection = await guild.scheduledEvents.fetch();
+
   return (
     <main className="min-h-screen justify-center p-8 pb-20 sm:p-20 outline-solid [outline-width:1em] outline-[#dcccb6] [text-shadow:0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6] flex flex-col sm:flex-row gap-8 items-center text-center">
       <div className="flex flex-col gap-4 items-center">
@@ -17,10 +27,53 @@ export default async function Home() {
         <hr className="border-black/25 border-solid border-2 my-1 mx-auto w-full max-w-[18rem]" />
         <p className="text-lg font-semibold text-foreground max-w-[35rem]">
           Doesn&apos;t matter if you&apos;re a first-timer or a crusher, this is
-          a space for us to come together, have fun, get comfortable and to grow as climbers and as a community
-          within climbing.
+          a space for us to come together, have fun, get comfortable and to grow
+          as climbers and as a community within climbing.
         </p>
 
+        <h2 className="text-lg sm:text-xl font-bold text-foreground">
+          Upcoming Meet-Ups:
+        </h2>
+        <ul
+          className="text-lg [text-shadow:none] sm:text-xl flex flex-col gap-2 font-semibold text-foreground max-w-[35rem] text-left"
+          style={{ listStyleType: "none" }}
+        >
+          {scheduledEventsCollection.map((event) => (
+            <li
+              className={`
+                border border-solid border-foreground rounded-md p-2
+                bg-white
+                `}
+              key={event.id}
+            >
+              <div className="text-xl font-semibold text-foreground">
+                {event.scheduledStartAt &&
+                  new Date(event.scheduledStartAt).toLocaleString("da-DK", {
+                    dateStyle: "long",
+                  })}
+              </div>
+              <div className="text-base font-semibold text-foreground">
+                {event.name}
+              </div>
+              {event.description ? (
+                <>
+                  <br />
+                  {event.description}
+                </>
+              ) : null}
+              <span
+                className="text-sm font-normal text-foreground"
+                style={{ fontStyle: "italic" }}
+              >
+                {event.entityMetadata?.location}
+              </span>
+            </li>
+          ))}
+        </ul>
+
+        <p className="text-lg font-semibold text-foreground">
+          If you have any questions, feel free to reach out on Discord or email.
+        </p>
         <div className="flex gap-4 flex-col sm:flex-row items-center justify-center">
           <a
             className="rounded-full border border-solid border-transparent transition-colors [text-shadow:none] flex items-center justify-center bg-[#5865F2] text-white gap-2 hover:text-black hover:bg-[#ff0] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
@@ -56,13 +109,6 @@ export default async function Home() {
             <span className="text-lg font-bold">Contact by email</span>
           </a>
         </div>
-        <h2 className="text-lg sm:text-xl font-bold text-foreground">
-          Upcoming Meet-Ups:
-        </h2>
-        <ul className="text-lg sm:text-xl font-bold text-foreground">
-          <li>Friday, 6th August 2021</li>
-          <li>Friday, 3rd September 2021</li>
-        </ul>
       </div>
       <Image
         src={UpTransShonkTransPng}
