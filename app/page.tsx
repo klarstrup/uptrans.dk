@@ -3,21 +3,21 @@ import UpTransShonkTransPng from "./UpTransShonkTrans.png";
 
 export default async function Home() {
   return (
-    <main className="min-h-screen justify-center p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)] outline-solid [outline-width:1em] outline-[#dcccb6] [text-shadow:0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6] flex flex-col sm:flex-row gap-8 items-center text-center">
+    <main className="min-h-screen justify-center p-8 pb-20 sm:p-20 outline-solid [outline-width:1em] outline-[#dcccb6] [text-shadow:0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6,0_0_1em_#dcccb6] flex flex-col sm:flex-row gap-8 items-center text-center">
       <div className="flex flex-col gap-4 items-center">
-        <h1 className="text-4xl sm:text-5xl font-bold text-foreground">
+        <h1 className="text-6xl sm:text-5xl font-bold text-foreground">
           UpTrans
         </h1>
         <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
           Trans & Non-Binary Bouldering Meet-Up
         </h2>
         <p className="text-lg font-semibold text-foreground max-w-[35rem]">
-          <div>
-            Do you want to climb with fellow trans and non-binary climbers?
-          </div>{" "}
-          <hr className="border-black/25 border-solid border-2 my-1 mx-auto w-full max-w-[18rem]" />
+          Do you want to climb with fellow trans and non-binary climbers?
+        </p>
+        <hr className="border-black/25 border-solid border-2 my-1 mx-auto w-full max-w-[18rem]" />
+        <p className="text-lg font-semibold text-foreground max-w-[35rem]">
           Doesn&apos;t matter if you&apos;re a first-timer or a crusher, this is
-          a space for us to come together, grow as climbers and as a community
+          a space for us to come together, have fun, get comfortable and to grow as climbers and as a community
           within climbing.
         </p>
 
