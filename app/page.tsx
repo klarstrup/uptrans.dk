@@ -47,11 +47,13 @@ export default async function Home() {
                 {event.scheduledStartAt &&
                   new Date(event.scheduledStartAt).toLocaleString("da-DK", {
                     dateStyle: "long",
+                    timeZone: "Europe/Copenhagen",
                   })}
                 ,{" "}
                 {event.scheduledStartAt &&
                   new Date(event.scheduledStartAt).toLocaleString("da-DK", {
                     timeStyle: "short",
+                    timeZone: "Europe/Copenhagen",
                   })}
               </div>
               <div className="text-base font-semibold">{event.name}</div>
