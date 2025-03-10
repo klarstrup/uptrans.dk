@@ -48,14 +48,15 @@ export default async function Home() {
                   new Date(event.scheduledStartAt).toLocaleString("da-DK", {
                     dateStyle: "long",
                   })}
+                ,{" "}
+                {event.scheduledStartAt &&
+                  new Date(event.scheduledStartAt).toLocaleString("da-DK", {
+                    timeStyle: "short",
+                  })}
               </div>
-              <div className="text-base font-semibold">
-                {event.name}
-              </div>
+              <div className="text-base font-semibold">{event.name}</div>
               {event.description ? (
-                <p className="text-base font-normal">
-                  {event.description}
-                </p>
+                <p className="text-base font-normal">{event.description}</p>
               ) : null}
               <span
                 className="text-sm font-normal"
