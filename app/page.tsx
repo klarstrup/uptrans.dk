@@ -57,15 +57,15 @@ export default async function Home() {
                   })}
               </div>
               <div className="text-base font-semibold">{event.name}</div>
-              {event.description ? (
-                <p className="text-base font-normal whitespace-pre-wrap">{event.description}</p>
-              ) : null}
               <span
                 className="text-sm font-normal"
                 style={{ fontStyle: "italic" }}
               >
                 {event.entityMetadata?.location}
               </span>
+              {event.description ? (
+                <p className="text-base font-normal whitespace-pre-wrap">{event.description}</p>
+              ) : null}
             </li>
           ))}
         </ul>
