@@ -58,7 +58,7 @@ export default async function Home() {
               </div>
               <div className="text-base font-semibold">{event.name}</div>
               {event.description ? (
-                <p className="text-base font-normal">{event.description}</p>
+                <p className="text-base font-normal whitespace-pre-wrap">{event.description}</p>
               ) : null}
               <span
                 className="text-sm font-normal"
