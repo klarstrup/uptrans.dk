@@ -2,6 +2,8 @@ import Image from "next/image";
 import UpTransShonkTransPng from "./UpTransShonkTrans.png";
 import { Client, GatewayIntentBits } from "discord.js";
 
+export const revalidate = 86400; // 24 hours
+
 const client = new Client({
   intents: [GatewayIntentBits.GuildScheduledEvents],
 });
@@ -64,7 +66,9 @@ export default async function Home() {
                 {event.entityMetadata?.location}
               </span>
               {event.description ? (
-                <p className="text-base font-normal whitespace-pre-wrap">{event.description}</p>
+                <p className="text-base font-normal whitespace-pre-wrap">
+                  {event.description}
+                </p>
               ) : null}
             </li>
           ))}
