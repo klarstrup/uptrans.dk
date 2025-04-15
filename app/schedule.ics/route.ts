@@ -33,6 +33,9 @@ export async function GET() {
   const icsFile = calendar.toString();
 
   return new NextResponse(icsFile, {
-    headers: { "Content-Type": "text/calendar" },
+    headers: {
+      "Content-Type": "text/calendar; charset=utf-8",
+      "Content-Disposition": 'attachment; filename="schedule.ics"',
+    },
   });
 }
