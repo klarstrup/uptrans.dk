@@ -30,49 +30,53 @@ export default async function Home() {
           a space for us to come together, have fun, get comfortable and to grow
           as climbers and as a community within climbing.
         </p>
-        <h2 className="text-lg sm:text-xl font-bold text-foreground">
-          Upcoming Meet-Ups:
-        </h2>
-        <ul
-          className="text-lg [text-shadow:none] sm:text-xl flex flex-col gap-2 font-semibold text-foreground max-w-[35rem] text-left"
-          style={{ listStyleType: "none" }}
-        >
-          {scheduledEventsCollection.map((event) => (
-            <li
-              className={`
+        {scheduledEventsCollection.length ? (
+          <>
+            <h2 className="text-lg sm:text-xl font-bold text-foreground">
+              Upcoming Meet-Ups:
+            </h2>
+            <ul
+              className="text-lg [text-shadow:none] sm:text-xl flex flex-col gap-2 font-semibold text-foreground max-w-[35rem] text-left"
+              style={{ listStyleType: "none" }}
+            >
+              {scheduledEventsCollection.map((event) => (
+                <li
+                  className={`
                 border border-solid border-foreground rounded-md p-2
                 bg-white flex flex-col gap-1
                 `}
-              key={event.id}
-            >
-              <div className="text-xl font-semibold">
-                {event.scheduledStartAt &&
-                  new Date(event.scheduledStartAt).toLocaleString("da-DK", {
-                    dateStyle: "long",
-                    timeZone: "Europe/Copenhagen",
-                  })}
-                ,{" "}
-                {event.scheduledStartAt &&
-                  new Date(event.scheduledStartAt).toLocaleString("da-DK", {
-                    timeStyle: "short",
-                    timeZone: "Europe/Copenhagen",
-                  })}
-              </div>
-              <div className="text-base font-semibold">{event.name}</div>
-              <span
-                className="text-sm font-normal"
-                style={{ fontStyle: "italic" }}
-              >
-                {event.entityMetadata?.location}
-              </span>
-              {event.description ? (
-                <p className="text-base font-normal whitespace-pre-wrap">
-                  {event.description}
-                </p>
-              ) : null}
-            </li>
-          ))}
-        </ul>
+                  key={event.id}
+                >
+                  <div className="text-xl font-semibold">
+                    {event.scheduledStartAt &&
+                      new Date(event.scheduledStartAt).toLocaleString("da-DK", {
+                        dateStyle: "long",
+                        timeZone: "Europe/Copenhagen",
+                      })}
+                    ,{" "}
+                    {event.scheduledStartAt &&
+                      new Date(event.scheduledStartAt).toLocaleString("da-DK", {
+                        timeStyle: "short",
+                        timeZone: "Europe/Copenhagen",
+                      })}
+                  </div>
+                  <div className="text-base font-semibold">{event.name}</div>
+                  <span
+                    className="text-sm font-normal"
+                    style={{ fontStyle: "italic" }}
+                  >
+                    {event.entityMetadata?.location}
+                  </span>
+                  {event.description ? (
+                    <p className="text-base font-normal whitespace-pre-wrap">
+                      {event.description}
+                    </p>
+                  ) : null}
+                </li>
+              ))}
+            </ul>
+          </>
+        ) : null}
         <div
           className="text-xs font-semibold text-foreground"
           style={{ fontStyle: "italic" }}
