@@ -1,3 +1,4 @@
+import { TZDate } from "@date-fns/tz";
 import { Client, GatewayIntentBits } from "discord.js";
 import * as ical from "ical-generator";
 import { NextResponse } from "next/server";
@@ -20,8 +21,8 @@ export async function GET() {
 
   for (const event of scheduledEventsCollection.values()) {
     calendar.createEvent({
-      start: event.scheduledStartAt!,
-      end: event.scheduledEndAt!,
+      start: new TZDate(event.scheduledStartAt!, "Europe/Copenhagen"),
+      end: new TZDate(event.scheduledEndAt!, "Europe/Copenhagen"),
       summary: event.name,
       description: event.description ?? "",
       location: event.entityMetadata?.location ?? "",
