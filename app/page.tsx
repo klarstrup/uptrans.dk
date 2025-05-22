@@ -30,7 +30,7 @@ export default async function Home() {
           a space for us to come together, have fun, get comfortable and to grow
           as climbers and as a community within climbing.
         </p>
-        {scheduledEventsCollection.length ? (
+        {scheduledEventsCollection.size ? (
           <>
             <h2 className="text-lg sm:text-xl font-bold text-foreground">
               Upcoming Meet-Ups:
