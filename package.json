@@ -11,7 +11,7 @@
   "dependencies": {
     "bufferutil": "^4.0.9",
     "discord.js": "^14.19.3",
-    "ical-generator": "^8.1.1",
+    "ical-generator": "^9.0.0",
     "next": "15.3.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
