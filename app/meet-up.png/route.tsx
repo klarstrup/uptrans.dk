@@ -12,11 +12,11 @@ export async function GET() {
   const fontData = await readFile(
     resolve(
       process.cwd(),
-      "./app/meet-up.jpg/HelveticaNeue-CondensedBlack-10.ttf"
+      "./app/meet-up.png/HelveticaNeue-CondensedBlack-10.ttf"
     )
   );
   const logoData = await readFile(
-    resolve(process.cwd(), "./app/meet-up.jpg/bg.jpg")
+    resolve(process.cwd(), "./app/meet-up.png/bg.jpg")
   );
   const logoSrc = Uint8Array.from(logoData).buffer;
   const guild =
