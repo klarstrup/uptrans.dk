@@ -4,7 +4,8 @@ import boardJpg from "./board.jpg";
 
 export const metadata: Metadata = {
   title: "UpTrans - Trans & Non-Binary Bouldering Meet-Up",
-  description: "What's UpTrans? UpTrans is a meet-up for trans & non-binary climbers.",
+  description:
+    "What's UpTrans? UpTrans is a meet-up for trans & non-binary climbers.",
 };
 
 export default function RootLayout({
