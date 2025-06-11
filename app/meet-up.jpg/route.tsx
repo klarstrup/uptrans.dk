@@ -1,6 +1,7 @@
 import { Client, GatewayIntentBits } from "discord.js";
 import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
+import { resolve } from "node:path";
 
 const client = new Client({
   intents: [GatewayIntentBits.GuildScheduledEvents],
@@ -9,12 +10,13 @@ client.login(process.env.DISCORD_TOKEN);
 
 export async function GET() {
   const fontData = await readFile(
-    String(
-      new URL("./HelveticaNeue-CondensedBlack-10.ttf", import.meta.url)
-    ).replace("file:", "")
+    resolve(
+      process.cwd(),
+      "./app/meet-up.jpg/HelveticaNeue-CondensedBlack-10.ttf"
+    )
   );
   const logoData = await readFile(
-    String(new URL("./bg.jpg", import.meta.url)).replace("file:", "")
+    resolve(process.cwd(), "./app/meet-up.jpg/bg.jpg")
   );
   const logoSrc = Uint8Array.from(logoData).buffer;
   const guild =
@@ -73,7 +75,6 @@ export async function GET() {
                   .map(() => `0 0 0.06em rgba(0, 0, 0)`)
                   .join(","),
                 transform: "rotate(-7deg)",
-                transformOrigin: "50% 100%",
               }}
             >
               Up
@@ -87,7 +88,6 @@ export async function GET() {
                   .map(() => `0 0 0.06em rgba(0, 0, 0)`)
                   .join(","),
                 transform: "rotate(7deg)",
-                transformOrigin: "50% 0%",
               }}
             >
               Trans
