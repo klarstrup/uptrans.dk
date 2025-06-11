@@ -8,6 +8,9 @@ const client = new Client({
 });
 client.login(process.env.DISCORD_TOKEN);
 
+export const dynamic = "force-static";
+export const revalidate = 86400; // 24 hours
+
 export async function GET() {
   const fontData = await readFile(
     resolve(
