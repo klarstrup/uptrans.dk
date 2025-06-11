@@ -75,6 +75,7 @@ export async function GET() {
                   .map(() => `0 0 0.06em rgba(0, 0, 0)`)
                   .join(","),
                 transform: "rotate(-7deg)",
+                paddingLeft: "0.125em",
               }}
             >
               Up
