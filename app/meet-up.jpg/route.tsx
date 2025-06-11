@@ -9,9 +9,13 @@ client.login(process.env.DISCORD_TOKEN);
 
 export async function GET() {
   const fontData = await readFile(
-    new URL("./HelveticaNeue-CondensedBlack-10.ttf", import.meta.url)
+    String(
+      new URL("./HelveticaNeue-CondensedBlack-10.ttf", import.meta.url)
+    ).replace("file:", "")
   );
-  const logoData = await readFile(new URL("./bg.jpg", import.meta.url));
+  const logoData = await readFile(
+    String(new URL("./bg.jpg", import.meta.url)).replace("file:", "")
+  );
   const logoSrc = Uint8Array.from(logoData).buffer;
   const guild =
     client.guilds.cache.get("1348233191349026846") ||
