@@ -63,7 +63,6 @@ export async function GET() {
               position: "absolute",
               top: 0,
               left: 0,
-              zIndex: "-1",
             }}
           />
           <div />
