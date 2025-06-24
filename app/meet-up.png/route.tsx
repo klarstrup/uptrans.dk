@@ -53,8 +53,6 @@ export async function GET() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={logoSrc as unknown as string}
-            width={800}
-            height={800}
             alt={"a"}
             style={{
               objectFit: "cover",
@@ -70,7 +68,7 @@ export async function GET() {
           <div style={{ display: "flex" }}>
             <h1
               style={{
-                fontSize: 150,
+                fontSize: 300,
                 fontWeight: "bold",
                 textAlign: "center",
                 textShadow: Array.from({ length: 40 })
@@ -84,7 +82,7 @@ export async function GET() {
             </h1>
             <h1
               style={{
-                fontSize: 150,
+                fontSize: 300,
                 fontWeight: "bold",
                 textAlign: "center",
                 textShadow: Array.from({ length: 40 })
@@ -127,7 +125,7 @@ export async function GET() {
           {nextMeetUp ? (
             <div
               style={{
-                fontSize: 80,
+                fontSize: 160,
                 textShadow: Array.from({ length: 40 })
                   .map(() => `0 0 0.08em rgba(0, 0, 0)`)
                   .join(","),
@@ -146,11 +144,12 @@ export async function GET() {
           {nextMeetUp ? (
             <div
               style={{
-                fontSize: 64,
+                fontSize: 128,
                 textShadow: Array.from({ length: 40 })
                   .map(() => `0 0 0.08em rgba(0, 0, 0)`)
                   .join(","),
                 transform: "rotate(-7deg)",
+                textAlign: "center",
               }}
             >
               {nextMeetUp.entityMetadata?.location?.split(",")[0] ?? ""}
@@ -160,7 +159,7 @@ export async function GET() {
           <div />
           <div
             style={{
-              fontSize: 40,
+              fontSize: 80,
               textShadow: Array.from({ length: 40 })
                 .map(() => `0 0 0.1em rgba(0, 0, 0)`)
                 .join(","),
@@ -173,8 +172,8 @@ export async function GET() {
         </div>
       ),
       {
-        width: 600,
-        height: 800,
+        width: 1200,
+        height: 1600,
         fonts: [
           {
             name: "Helvetica Neue Condensed Black",
