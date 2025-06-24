@@ -56,7 +56,7 @@ export default async function Home() {
                     <div className="text-xl font-semibold">
                       {event.scheduledStartAt &&
                         new Date(event.scheduledStartAt).toLocaleString(
-                          "da-DK",
+                          "en-DK",
                           {
                             dateStyle: "long",
                             timeZone: "Europe/Copenhagen",
@@ -65,7 +65,7 @@ export default async function Home() {
                       ,{" "}
                       {event.scheduledStartAt &&
                         new Date(event.scheduledStartAt).toLocaleString(
-                          "da-DK",
+                          "en-DK",
                           {
                             timeStyle: "short",
                             timeZone: "Europe/Copenhagen",
