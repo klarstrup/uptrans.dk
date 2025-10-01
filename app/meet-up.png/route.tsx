@@ -125,7 +125,7 @@ export async function GET() {
           {nextMeetUp ? (
             <div
               style={{
-                fontSize: 160,
+                fontSize: 140,
                 textShadow: Array.from({ length: 40 })
                   .map(() => `0 0 0.08em rgba(0, 0, 0)`)
                   .join(","),
@@ -144,7 +144,7 @@ export async function GET() {
           {nextMeetUp ? (
             <div
               style={{
-                fontSize: 128,
+                fontSize: 120,
                 textShadow: Array.from({ length: 40 })
                   .map(() => `0 0 0.08em rgba(0, 0, 0)`)
                   .join(","),
