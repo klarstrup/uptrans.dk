@@ -28,6 +28,7 @@ export async function GET() {
       location: event.entityMetadata?.location ?? "",
       url: event.url ?? "",
       timezone: "Europe/Copenhagen",
+      id: event.id,
     });
   }
 
