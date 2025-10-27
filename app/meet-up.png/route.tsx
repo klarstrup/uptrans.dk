@@ -125,7 +125,7 @@ export async function GET() {
           {nextMeetUp ? (
             <div
               style={{
-                fontSize: 140,
+                fontSize: 130,
                 textShadow: Array.from({ length: 40 })
                   .map(() => `0 0 0.08em rgba(0, 0, 0)`)
                   .join(","),
