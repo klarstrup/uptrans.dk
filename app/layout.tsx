@@ -1,6 +1,7 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
-import "./globals.css";
 import boardJpg from "./board.jpg";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "UpTrans - Trans & Non-Binary Bouldering Meet-Up",
@@ -25,6 +26,7 @@ export default function RootLayout({
         }}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
