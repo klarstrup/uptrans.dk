@@ -105,7 +105,7 @@ export default async function Home() {
         <div className="flex gap-4 flex-row flex-wrap items-center justify-center">
           <a
             className="rounded-full border border-solid border-transparent transition-colors [text-shadow:none] flex items-center justify-center bg-[#5865F2] text-white gap-2 hover:text-black hover:bg-[#ff0] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://discord.gg/uhchMEGEMB"
+            href="https://discord.gg/hFpXMySYa"
             target="_blank"
             rel="noopener noreferrer"
           >
