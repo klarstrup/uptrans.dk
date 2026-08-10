@@ -1,0 +1,8 @@
+{
+  "ignore": {
+    "eslint": {
+      "versions": "10.8.1",
+      "reason": ""
+    }
+  }
+}
