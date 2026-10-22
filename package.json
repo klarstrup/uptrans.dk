@@ -17,9 +17,9 @@
     "date-fns": "^4.4.0",
     "discord.js": "^14.27.0",
     "ical-generator": "^11.1.2",
-    "next": "16.4.0",
-    "react": "^19.3.0",
-    "react-dom": "^19.3.0",
+    "next": "16.4.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
     "zlib-sync": "^0.1.10"
   },
   "devDependencies": {
@@ -29,7 +29,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^10",
-    "eslint-config-next": "16.4.0",
+    "eslint-config-next": "16.4.2",
     "tailwindcss": "^4",
     "typescript": "^7"
   }
