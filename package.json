@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "ci": "bunx npm-run-all --parallel ts build",
-    "ts": "bunx --package typescript-7 tsc --noEmit"
+    "ts": "bun check"
   },
   "dependencies": {
     "@date-fns/tz": "^1.5.0",
